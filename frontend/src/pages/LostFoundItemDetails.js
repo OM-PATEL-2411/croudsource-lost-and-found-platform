@@ -12,8 +12,8 @@ const LostFoundItemDetails = () => {
     const fetchItemDetails = async () => {
       try {
         const apiUrl = itemType === 'lost'
-          ? `http://localhost:5000/lostitems/itemDetails/${itemId}`
-          : `http://localhost:5000/founditems/itemDetails/${itemId}`;
+          ? `https://croudsource-lost-and-found-platform.onrender.com/lostitems/itemDetails/${itemId}`
+          : `https://croudsource-lost-and-found-platform.onrender.com/founditems/itemDetails/${itemId}`;
 
         const response = await axios.get(apiUrl);
         setItemDetails(response.data);
