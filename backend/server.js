@@ -33,7 +33,7 @@ app.use((req, res, next) => {
 app.use(express.json()); // Parses JSON requests
 
 app.use(cors({
-  origin: 'http://localhost:3000', // Optional: Replace with frontend domain
+  origin: '*', // Optional: Replace with frontend domain
   credentials: true
 }));
 
