@@ -30,7 +30,7 @@ const Dashboard = () => {
     // Fetch items from the backend when the component mounts
     const fetchItems = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/routes/items'); // Replace with your actual API route
+        const response = await axios.get('https://croudsource-lost-and-found-platform.onrender.com/routes/items'); // Replace with your actual API route
         setItems(response.data); // Set the state with the fetched items
         setFilteredItems(response.data); // Initially, show all items
       } catch (error) {
