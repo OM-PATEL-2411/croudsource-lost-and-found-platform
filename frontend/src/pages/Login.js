@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; // Import Link from react-router-dom
 import '../styles/Login.css';
-const API_BASE_URL = 'http://localhost:5000/api/auth'; // update this if port is different
+const API_BASE_URL = 'https://croudsource-lost-and-found-platform.onrender.com/api/auth'; // update this if port is different
 
 const Login = () => {
   const [email, setEmail] = useState('');
