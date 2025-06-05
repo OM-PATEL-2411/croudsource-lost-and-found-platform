@@ -12,7 +12,7 @@ const ItemDetails = () => {
   useEffect(() => {
     const fetchItemDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/routes/itemDetails/${itemId}`);
+        const response = await axios.get(`https://croudsource-lost-and-found-platform.onrender.com/routes/itemDetails/${itemId}`);
         setItemDetails(response.data);
       } catch (error) {
         console.error('Error fetching item details:', error);
