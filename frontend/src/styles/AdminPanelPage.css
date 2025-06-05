@@ -1,0 +1,124 @@
+/* Admin Panel Styles */
+
+/* General styles for Admin Panel */
+.admin-panel {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Container for the entire admin panel */
+  .admin-panel-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Styling */
+  .admin-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .admin-header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .admin-nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .admin-nav ul li {
+    margin: 0 20px;
+  }
+  
+  .admin-nav ul li button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .admin-nav ul li button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Admin User and Item View Styles */
+  .admin-view-container {
+    margin-top: 20px;
+  }
+  
+  .admin-view-container button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .admin-view-container button:hover {
+    background-color: #218838;
+  }
+  
+  /* Make sure the content for users and items sections are well spaced */
+  .admin-user, .admin-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .admin-user > div, .admin-item > div {
+    width: 100%;
+    max-width: 1000px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-user h2, .admin-item h2 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  /* Styling for different content views */
+  .admin-user-content, .admin-item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  /* CSS for Loading state */
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 24px;
+    color: #007bff;
+  }
+  

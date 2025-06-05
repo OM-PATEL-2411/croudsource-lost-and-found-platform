@@ -1,0 +1,182 @@
+/* adminitem.css */
+
+/* Body background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('/src/img/iteam.jpg') no-repeat center center/cover; /* Add background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Admin container */
+.admin-itemcontainer{
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative; /* Required for positioning the backdrop filter */
+}
+
+.admin-item-container h1{
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+/* Admin Title */
+.admin-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.5rem;
+}
+
+/* Search Input */
+.admin-item-search {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: none;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item-table-container {
+  width: calc(100% - 40px);  /* Leave space for horizontal margins */
+  margin: 20px auto;         /* 20px top/bottom, auto left/right to center */
+  padding: 20px;             /* Inner spacing inside the container */
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+
+.item-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  border-spacing: 0 10px; /* Optional: adds spacing between rows */
+}
+
+/* Table Header */
+.item-table thead th {
+  background-color: #162220;
+  color: white;
+  padding: 12px 16px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Table rows styled like cards */
+.item-table tbody tr {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.item-table tbody tr:hover {
+  background-color: #f4f4f4;
+  transform: scale(1.01);
+}
+
+.item-table td {
+  padding: 16px;
+  vertical-align: middle;
+  text-align: center; /* Center table data */
+}
+
+/* Avatar */
+.item-avatar {
+  width: 45px;
+  height: 45px;
+  background-color: #888;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Name cell with avatar */
+.name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left; /* Align text to the left to better match user details */
+}
+
+/* Delete Button */
+.delete-item-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-item-button:hover {
+  background-color: #c0392b;
+}
+
+/* Search Bar Container */
+.search-container {
+  padding: 1rem 0;
+  text-align: center; /* Center child elements */
+  margin-top: 20px; /* Add margin to give space between table and search bar */
+}
+
+/* Search Input */
+.admin-item-search {
+  width: 60%; /* Adjust this as needed */
+  max-width: 500px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Table Container */
+.item-table-container {
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+
+.scrollable-tbody {
+  max-height: 320px; /* Approx. height for 5 rows */
+  overflow-y: auto;
+  border-top: 1px solid #ddd;
+}
+
+.scrollable-tbody table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.scrollable-tbody tr {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.scrollable-tbody tr:hover {
+  background-color: #f4f4f4;
+  transform: scale(1.01);
+}

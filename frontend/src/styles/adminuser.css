@@ -1,0 +1,120 @@
+/* Container for the user list */
+.admin-user-container {
+  padding: 20px;
+  background: url('/src/img/iteam.jpg') no-repeat center center/cover; /* Add background image */
+  width: 100%;
+  margin: 0 auto;
+  position: relative; /* Required for positioning the backdrop filter */
+}
+
+.admin-user-container h1{
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+/* Apply blur effect to the table */
+.user-table-container {
+  width: calc(100% - 40px);  /* Leave space for horizontal margins */
+  margin: 20px auto;         /* 20px top/bottom, auto left/right to center */
+  padding: 20px;             /* Inner spacing inside the container */
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+/* Search Bar */
+.admin-user-search {
+  width: 70%;
+  max-width: 500px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 0 auto 20px auto; /* Center horizontally with top/bottom margin */
+  font-size: 16px;
+  display: block; /* Required to apply horizontal centering with margin auto */
+}
+
+/* Table Layout */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  border-spacing: 0 10px; /* Optional: adds spacing between rows */
+}
+
+.user-table th, .user-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-table th {
+  background-color: #162220;
+  color: white;
+  font-weight: bold;
+}
+
+.user-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.user-table td {
+  color: #555;
+}
+
+/* Avatar Styling */
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  background-color: #757575;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+/* Delete Button */
+.delete-user-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.delete-user-button:hover {
+  background-color: #c0392b;
+}
+
+/* Table Scrollable Wrapper */
+.scrollable-table-wrapper {
+  max-height: 320px; /* Height for approx 5 rows */
+  overflow-y: auto; /* Vertical scrolling */
+  overflow-x: auto; /* Horizontal scrolling */
+  display: block; /* Block-level for enabling scrolling */
+  border-top: 1px solid #ddd; /* Add top border for separation */
+}
+
+.scrollable-table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.scrollable-table-wrapper tr {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.scrollable-table-wrapper tr:hover {
+  background-color: #f4f4f4;
+  transform: scale(1.01);
+}

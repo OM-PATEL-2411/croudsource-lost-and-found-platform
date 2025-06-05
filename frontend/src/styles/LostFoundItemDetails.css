@@ -1,0 +1,88 @@
+
+
+/* Main container should take full viewport and center content */
+.itemDetailsContainer {
+  height: 100vh; /* Full height */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  background: #f5f7fa;
+  overflow: hidden; /* No scroll */
+}
+
+/* Back button */
+.backButton {
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
+/* The content area */
+.detailsWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  max-width: 960px;
+  height: calc(100vh - 100px); /* Leave room for button and padding */
+  overflow: hidden; /* Prevent scroll */
+}
+
+/* Image area */
+.imageWrapper {
+  flex: 1;
+  max-width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.itemImage {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Stretches image to fill area */
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Text content - scroll only inside this if needed */
+.itemInfo {
+  flex: 1;
+  max-width: 50%;
+  height: 100%;
+  overflow-y: auto; /* Scroll only here if needed */
+  padding-right: 1rem;
+}
+
+/* Rest of the text styling */
+.heading {
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.itemFields p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #000000;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.itemFields strong {
+  color: #002fff;
+  font-weight: 600;
+}

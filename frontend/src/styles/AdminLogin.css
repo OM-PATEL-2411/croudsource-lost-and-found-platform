@@ -1,0 +1,123 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Admin Login Page Container */
+.admin-login-page {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to enhance text visibility */
+}
+
+/* Background Image */
+.login-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../img/iteam.jpg'); /* Add your image path here */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px); /* Blur the background */
+  z-index: -1; /* Send the background image behind the form */
+}
+
+/* Login Form Container */
+.admin-login-container {
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Increased shadow for more depth */
+  border: 3px solid rgba(0, 0, 0, 0.5); /* Soft border */
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+  backdrop-filter: blur(4px); /* Increased blur for a softer effect */
+  animation: fadeIn 1s ease-out; /* Added animation for smooth appearance */
+}
+
+/* Animation for smooth appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading */
+.admin-login-container h2 {
+  margin-bottom: 25px;
+  font-size: 34px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Slight text shadow for better visibility */
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #c0a080;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #f9f6f2;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #8B4513;
+  outline: none;
+  box-shadow: 0 0 5px rgba(139, 69, 19, 0.5); /* Added soft shadow on focus */
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 20px;
+  background-color: #8B4513;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #A0522D; /* Slightly lighter brown on hover */
+  transform: translateY(-3px); /* Small hover effect */
+}
+
+button:active {
+  transform: translateY(1px); /* Slightly push the button down when clicked */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .admin-login-container {
+    padding: 20px;
+    width: 90%;
+  }
+}
