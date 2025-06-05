@@ -35,7 +35,7 @@ const ReportFound = () => {
     formData.append('image', image);
 
     try {
-      await axios.post('http://localhost:5000/api/Found/upload-item', formData, {
+      await axios.post('https://croudsource-lost-and-found-platform.onrender.com/api/Found/upload-item', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       alert('Found item reported successfully');

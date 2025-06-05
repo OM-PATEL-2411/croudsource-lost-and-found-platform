@@ -65,7 +65,7 @@ const ReportLost = () => {
 
     try {
       setLoading(true);
-      await axios.post('http://localhost:5000/api/Lost/upload-item', formData, {
+      await axios.post('https://croudsource-lost-and-found-platform.onrender.com/api/Lost/upload-item', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       alert('Lost item reported successfully');

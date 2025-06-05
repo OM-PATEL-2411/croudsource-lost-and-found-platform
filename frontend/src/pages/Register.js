@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../styles/Register.css'; // Create separate CSS file if needed
 
 const Register = () => {
@@ -25,7 +25,7 @@ const Register = () => {
     setLoading(true);  // Set loading state true
 
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/register', formData);
+      const res = await axios.post('https://croudsource-lost-and-found-platform.onrender.com/api/auth/register', formData);
       setMessage(res.data.message);
     } catch (error) {
       setMessage(error.response?.data?.message || 'Registration failed');

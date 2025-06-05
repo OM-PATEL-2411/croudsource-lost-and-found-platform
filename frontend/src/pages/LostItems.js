@@ -1,7 +1,7 @@
 // src/pages/LostItemsPage.js
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode'; // Import jwtDecode here
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import '../styles/LostItem.css';
@@ -25,7 +25,7 @@ const LostItemsPage = () => {
     // Fetch lost items
     const fetchItems = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/lostitems/view');
+        const response = await axios.get('https://croudsource-lost-and-found-platform.onrender.com/lostitems/view');
         setLostItems(response.data);
         setFilteredItems(response.data); // Initially set filtered items to all lost items
       } catch (error) {

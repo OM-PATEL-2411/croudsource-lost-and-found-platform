@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import "../styles/adminitem.css";
+import BASE_URL from "./config.js";
 
 const AdminItem = () => {
   const [items, setItems] = useState([]);
@@ -9,7 +10,7 @@ const AdminItem = () => {
   // Fetch all items
   const fetchItems = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/items');
+      const res = await axios.get(`${BASE_URL}/api/items`);
       setItems(res.data);
     } catch (error) {
       console.error('Error fetching items:', error);
@@ -19,7 +20,7 @@ const AdminItem = () => {
   // Delete a specific item
   const deleteItem = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/items/${id}`);
+      await axios.delete(`https://croudsource-lost-and-found-platform.onrender.com/api/items/${id}`);
       fetchItems();
     } catch (error) {
       console.error('Error deleting item:', error);

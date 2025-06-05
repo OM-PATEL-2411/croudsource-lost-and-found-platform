@@ -8,7 +8,7 @@ const AdminUser = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/users');
+      const res = await axios.get('https://croudsource-lost-and-found-platform.onrender.com/api/users');
       setUsers(res.data);
     } catch (error) {
       console.error("Failed to fetch users:", error);
@@ -17,7 +17,7 @@ const AdminUser = () => {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/users/${id}`);
+      await axios.delete(`https://croudsource-lost-and-found-platform.onrender.com/api/users/${id}`);
       fetchUsers();
     } catch (error) {
       console.error("Failed to delete user:", error);
