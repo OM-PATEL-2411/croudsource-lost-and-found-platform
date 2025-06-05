@@ -25,7 +25,7 @@ const FoundItemsPage = () => {
     // Fetch found items
     const fetchItems = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/founditems/view');
+        const response = await axios.get('https://croudsource-lost-and-found-platform.onrender.com/founditems/view');
         setFoundItems(response.data);
         setFilteredItems(response.data); // Initially set filtered items to all found items
       } catch (error) {
