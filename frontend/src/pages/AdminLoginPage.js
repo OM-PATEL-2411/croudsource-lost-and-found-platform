@@ -12,7 +12,7 @@ const AdminLoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/admin/login', { email, password });
+      const response = await axios.post('https://croudsource-lost-and-found-platform.onrender.com/admin/login', { email, password });
       if (response.data.success) {
         localStorage.setItem('isAdmin', 'true');
         navigate('/admin-panel');
